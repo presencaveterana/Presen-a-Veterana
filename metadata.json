@@ -1,0 +1,6 @@
+{
+  "name": "Presença Veterana Unipessoal Lda.",
+  "description": "Website institucional e catálogo de especialidades em afagamentos, pinturas, envernizamentos, decks e pladur para a Presença Veterana Unipessoal Lda.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
