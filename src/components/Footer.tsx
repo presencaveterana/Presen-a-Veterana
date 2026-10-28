@@ -1,5 +1,5 @@
 import React from "react";
-import { MessageCircle, Mail, Phone, MapPin, Shield } from "lucide-react";
+import { MessageCircle, Mail, MapPin } from "lucide-react";
 import {
   WHATSAPP_DISPLAY,
   EMAIL_CONTACT,
@@ -21,11 +21,6 @@ export const Footer: React.FC = () => {
                 className="h-10 sm:h-14 w-auto object-contain brightness-110 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)] group-hover:scale-[1.02] transition-transform"
               />
             </a>
-
-            <div className="pt-1 sm:pt-2 text-[11px] sm:text-xs text-slate-400 flex items-center gap-2">
-              <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D4A64C] shrink-0" />
-              <span>Sociedade por Quotas Unipessoal · Atendimento por toda a Europa</span>
-            </div>
           </div>
 
           {/* Specialties Column */}
@@ -77,6 +72,11 @@ export const Footer: React.FC = () => {
               <li>
                 <a href="#contactos" className="hover:text-[#D4A64C] transition-colors">
                   Contactos & Visitas
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="hover:text-[#D4A64C] transition-colors">
+                  Perguntas Frequentes
                 </a>
               </li>
             </ul>

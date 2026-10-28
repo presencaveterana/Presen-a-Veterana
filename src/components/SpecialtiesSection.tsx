@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MessageCircle, CheckCircle2, ZoomIn, ShieldCheck, Sparkles } from "lucide-react";
+import { ZoomIn, Sparkles } from "lucide-react";
 import {
   SPECIALTIES_DATA,
   Specialty,
@@ -96,24 +96,6 @@ export const SpecialtiesSection: React.FC = () => {
                     <p className="mt-2.5 sm:mt-4 text-xs sm:text-sm lg:text-base text-[#646B66] leading-relaxed">
                       {specialty.description}
                     </p>
-
-                    {/* Key Technical Highlights */}
-                    <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-2.5 pt-3 sm:pt-4 border-t border-[#E6E9E4]">
-                      {specialty.details.map((detail, idx) => (
-                        <div key={idx} className="flex items-start gap-2 sm:gap-2.5">
-                          <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D4A64C] shrink-0 mt-0.5" />
-                          <span className="text-[11px] sm:text-sm text-[#00351F]/80 leading-normal">
-                            {detail}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Discreet Quality & Execution Guarantee Badge */}
-                    <div className="mt-4 pt-3 flex items-center gap-2 text-[11px] sm:text-xs text-[#646B66]">
-                      <ShieldCheck className="w-3.5 h-3.5 text-[#D4A64C] shrink-0" />
-                      <span>Execução com materiais de topo e acompanhamento técnico</span>
-                    </div>
                   </div>
 
                   {/* 4 PHOTOGRAPHS (2×2 GRID) COLUMN */}
@@ -124,20 +106,24 @@ export const SpecialtiesSection: React.FC = () => {
                   >
                     <div className="p-1.5 sm:p-3 bg-[#F8F7F3] rounded-xl sm:rounded-2xl border border-[#E6E9E4] shadow-sm">
                       <div className="grid grid-cols-2 gap-1.5 sm:gap-3">
-                        {specialty.images.map((photo, photoIdx) => (
-                          <div
-                            key={photoIdx}
-                            onClick={() => handleOpenPhoto(specialty, photoIdx)}
-                            className="group/photo relative aspect-[4/3] rounded-lg sm:rounded-xl overflow-hidden bg-slate-200 cursor-pointer shadow-xs hover:shadow-md transition-all border border-[#E6E9E4]/80"
-                            role="button"
-                            tabIndex={0}
-                            onKeyDown={(e) => {
-                              if (e.key === "Enter" || e.key === " ") {
-                                handleOpenPhoto(specialty, photoIdx);
-                              }
-                            }}
-                            aria-label={`Ampliar fotografia: ${photo.title}`}
-                          >
+                        {specialty.images.map((photo, photoIdx) => {
+                          const isHero = specialty.images.length === 3 && photoIdx === 0;
+                          return (
+                            <div
+                              key={photoIdx}
+                              onClick={() => handleOpenPhoto(specialty, photoIdx)}
+                              className={`group/photo relative rounded-lg sm:rounded-xl overflow-hidden bg-slate-200 cursor-pointer shadow-xs hover:shadow-md transition-all border border-[#E6E9E4]/80 ${
+                                isHero ? "col-span-2 aspect-[16/9]" : "aspect-[4/3]"
+                              }`}
+                              role="button"
+                              tabIndex={0}
+                              onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                  handleOpenPhoto(specialty, photoIdx);
+                                }
+                              }}
+                              aria-label={`Ampliar fotografia: ${photo.title}`}
+                            >
                             <img
                               src={photo.url}
                               alt={photo.alt}
@@ -169,15 +155,16 @@ export const SpecialtiesSection: React.FC = () => {
 
                             {/* Subtle Image Tag/Index Indicator */}
                             <div className="absolute top-1.5 left-1.5 sm:top-2 sm:left-2 px-1 sm:px-1.5 py-0.5 rounded bg-black/50 text-[9px] sm:text-[10px] font-mono text-white/90 backdrop-blur-xs pointer-events-none">
-                              {specialty.number}.{photoIdx + 1}
+                              {photoIdx + 1}
                             </div>
                           </div>
-                        ))}
+                        );
+                      })}
                       </div>
 
-                      {/* Small Caption for 2x2 Gallery */}
+                      {/* Small Caption for Gallery */}
                       <div className="mt-1.5 sm:mt-2.5 px-1.5 sm:px-2 flex items-center justify-between text-[10px] sm:text-[11px] text-[#646B66]">
-                        <span>4 fotos · Toque para ampliar</span>
+                        <span>{specialty.images.length} fotos · Toque para ampliar</span>
                         <span className="text-[#B8862D] font-medium hidden sm:inline">
                           Galeria {specialty.title}
                         </span>
@@ -212,22 +199,12 @@ export const SpecialtiesSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="shrink-0 flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
-              <a
-                href={getWhatsAppLink("Olá! Gostaria de uma visita técnica e orçamento para a minha obra com a Presença Veterana.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3.5 text-xs sm:text-sm font-bold text-[#00351F] bg-[#D4A64C] hover:bg-[#F6DF83] rounded-xl transition-all shadow-md cursor-pointer"
-              >
-                <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                <span>Pedir Orçamento no WhatsApp</span>
-              </a>
-
+            <div className="shrink-0 flex items-center w-full sm:w-auto">
               <a
                 href="#contactos"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 sm:px-5 sm:py-3.5 text-xs sm:text-sm font-semibold text-white/90 hover:text-white bg-white/10 hover:bg-white/15 rounded-xl transition-all border border-white/20"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 sm:px-7 sm:py-3.5 text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 rounded-xl transition-all border border-white/20 shadow-sm"
               >
-                Ver todos os contactos
+                Ver todos os contactos →
               </a>
             </div>
           </div>

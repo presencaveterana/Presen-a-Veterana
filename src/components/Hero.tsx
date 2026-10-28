@@ -1,6 +1,5 @@
 import React from "react";
-import { MessageCircle, ArrowDown, Sparkles } from "lucide-react";
-import { getWhatsAppLink } from "../data/specialtiesData";
+import { ArrowDown, Sparkles } from "lucide-react";
 
 export const Hero: React.FC = () => {
   return (
@@ -8,19 +7,19 @@ export const Hero: React.FC = () => {
       {/* Background Image with Fallback and Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_presenca_veterana_1792869640177.jpg"
-          alt="Remodelação e pavimento em madeira nobre restaurado pela Presença Veterana"
+          src="/assets/aistudio/Captura_de_tela_2026-10-28_172622_f03fd511.png"
+          alt="Paisagem arquitetónica de Portugal com edifícios e telhados tradicionais - Presença Veterana"
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover object-center brightness-90"
+          className="w-full h-full object-cover object-[center_45%] brightness-95"
           onError={(e) => {
             const target = e.currentTarget;
             target.onerror = null;
-            target.src = "/assets/aistudio/Sitio_digital_minimalista_visual_6fc519c0.jpg";
+            target.src = "/src/assets/images/hero_presenca_veterana_1792869640177.jpg";
           }}
         />
-        {/* Scrim Overlay ensuring WCAG AA contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#002B19]/95 via-[#00351F]/85 to-[#00351F]/60" />
-        <div className="absolute inset-0 bg-radial from-transparent via-transparent to-black/40" />
+        {/* Scrim Overlay ensuring WCAG AA contrast and elegant brand atmosphere */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#002B19]/92 via-[#00351F]/80 to-[#00351F]/55" />
+        <div className="absolute inset-0 bg-black/25" />
       </div>
 
       {/* Main Hero Content */}
@@ -34,29 +33,19 @@ export const Hero: React.FC = () => {
 
           {/* Headline */}
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight font-display text-white text-balance leading-tight sm:leading-[1.14]">
-            Mestria e Rigor em <span className="metallic-gold-text">Pavimentos de Madeira</span>, Pinturas e Pladur
+            Construímos com rigor. <span className="metallic-gold-text">Transformamos com qualidade.</span>
           </h1>
 
           {/* Lead Paragraph */}
           <p className="mt-3 sm:mt-6 text-xs sm:text-base lg:text-lg text-slate-200 leading-relaxed max-w-2xl text-balance">
-            Elevamos o conforto e valor do seu imóvel com afagamentos de máxima precisão, envernizamentos nobres, aplicação de decks para áreas exteriores e acabamentos impecáveis de pintura e gesso cartonado.
+            Soluções profissionais de construção civil, remodelação e acabamentos, com compromisso, atenção ao detalhe e acompanhamento em cada etapa.
           </p>
 
           {/* CTAs */}
           <div className="mt-5 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4">
             <a
-              href={getWhatsAppLink("Olá! Gostaria de falar com a Presença Veterana para pedir um orçamento gratuito.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 sm:gap-3 px-5 py-3 sm:px-8 sm:py-4 text-xs sm:text-base font-bold text-[#00351F] bg-[#D4A64C] hover:bg-[#F6DF83] rounded-xl transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 cursor-pointer"
-            >
-              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span>Pedir Orçamento Gratuito</span>
-            </a>
-
-            <a
               href="#especialidades"
-              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/15 rounded-xl border border-white/20 backdrop-blur-sm transition-all"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-8 sm:py-4 text-xs sm:text-base font-semibold text-white bg-white/10 hover:bg-white/15 rounded-xl border border-white/20 backdrop-blur-sm transition-all shadow-sm"
             >
               <span>Ver Especialidades</span>
               <ArrowDown className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D4A64C]" />

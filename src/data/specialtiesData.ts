@@ -42,28 +42,28 @@ export const SPECIALTIES_DATA: Specialty[] = [
     whatsappMessage: "Olá! Gostaria de pedir um orçamento para o serviço de Afagamentos de Pavimentos e Assoalhos com a Presença Veterana.",
     images: [
       {
-        url: "/servicos/afagamentos/01-maquinas-afagamento.jpg",
-        title: "Máquinas de Afagamento Profissionais",
-        description: "Equipamento com sistema de aspiração que previne a dispersão de pó no ambiente.",
-        alt: "Máquinas profissionais de afagamento de chão de madeira em operação"
+        url: "/assets/aistudio/istockphoto-1180236492-612x612_7a45d9dd.jpg",
+        title: "Afagamento e Nivelamento de Precisão",
+        description: "Maquinaria rotativa profissional com sistema de aspiração que previne a dispersão de pó no ambiente.",
+        alt: "Máquina profissional de afagamento e nivelamento de chão de madeira"
       },
       {
-        url: "/servicos/afagamentos/02-pavimentos-tratamento.jpg",
-        title: "Pavimentos de Madeira em Tratamento",
-        description: "Remoção cuidada das camadas antigas preservando a integridade das tábuas nobres.",
-        alt: "Pavimento em tratamento com contraste entre tábuas originais e lixadas"
+        url: "/assets/aistudio/sanding_2f1cac35.webp",
+        title: "Tratamento Técnico e Polimento",
+        description: "Técnico especialista com domínio absoluto da granulometria e recuperação dos veios naturais da madeira.",
+        alt: "Profissional especializado a operar afagadora em soalho com acabamento nobre"
       },
       {
-        url: "/servicos/afagamentos/03-profissionais-afagar.jpg",
-        title: "Profissionais a Afagar Soalhos",
-        description: "Técnicos experientes com domínio absoluto da granulometria e das fibras da madeira.",
-        alt: "Profissional especializado a operar afagadora em soalho de habitação"
+        url: "/assets/aistudio/4ccc35f145426fe95baf6399f84d19cd_ff873198.jpg",
+        title: "Restauração de Tábuas e Deck",
+        description: "Recuperação profunda com remoção do desgaste e revelação do tom original e vivo da madeira.",
+        alt: "Restauração e lixamento detalhado de tábuas de pavimento em madeira"
       },
       {
-        url: "/servicos/afagamentos/04-pavimentos-restaurados.jpg",
-        title: "Resultados de Pavimentos Restaurados",
-        description: "Soalho revitalizado com brilho uniforme, cor natural enriquecida e máxima longevidade.",
-        alt: "Pavimento de madeira totalmente restaurado com acabamento nobre e brilhante"
+        url: "/assets/aistudio/Captura_de_tela_2025-03-12_162733_e88f1d00.png",
+        title: "Soalho Nobre Recuperado e Finalizado",
+        description: "Salão com tábua corrida de madeira perfeitamente afagada, nivelada e protegida com acabamento natural duradouro.",
+        alt: "Amplo salão com soalho de madeira nobre restaurado com acabamento impecável e traves de madeira à vista"
       }
     ]
   },
@@ -208,22 +208,22 @@ export const SPECIALTIES_DATA: Specialty[] = [
         alt: "Teto falso em pladur com fita LED embutida em sala de estar moderna"
       },
       {
-        url: "/servicos/pladur/02-divisorias-pladur.jpg",
-        title: "Divisórias em Pladur",
-        description: "Criação rápida e limpa de novos quartos, gabinetes, closets ou zonas de arrumo.",
-        alt: "Estrutura metálica e placas de gesso cartonado na montagem de divisórias"
+        url: "/assets/aistudio/about-CKGIpOG4_d66420e2.jpg",
+        title: "Nivelamento e Alinhamento de Precisão",
+        description: "Controlo rigoroso com nível para garantir esquadria, verticalidade e prumo milimétrico.",
+        alt: "Técnico a verificar prumo e alinhamento milimétrico de parede com nível"
       },
       {
-        url: "/servicos/pladur/03-aplicacao-placas-gesso.jpg",
-        title: "Aplicação de Placas de Gesso Cartonado",
-        description: "Fixação rigorosa com parafusos autorroscantes e esquadria perfeita.",
-        alt: "Aplicação e fixação técnica de placas de gesso em paredes de alvenaria"
+        url: "/assets/aistudio/placas-yeso-en-aragon_d6c40844.jpg",
+        title: "Montagem e Barramento de Juntas em Pladur",
+        description: "Aplicação técnica de placas de gesso cartonado com tratamento e barramento de juntas contínuo.",
+        alt: "Estrutura e divisórias em pladur com barramento de juntas e preparação para pintura"
       },
       {
-        url: "/servicos/pladur/04-acabamentos-interiores.jpg",
-        title: "Acabamentos Interiores Arquitetónicos",
-        description: "Superfícies milimetricamente planas, preparadas para qualquer acabamento nobre.",
-        alt: "Espaço concluído com detalhes de pladur, nichos decorativos e iluminação suave"
+        url: "/servicos/pladur/04-teto-falso-nichos-led.jpg",
+        title: "Teto Falso com Sancas LED e Nichos Embutidos",
+        description: "Tetos falsos em múltiplos níveis com iluminação indireta oculta e parede com nichos iluminados para TV.",
+        alt: "Teto falso multinível em pladur com sancas de luz LED e móvel de TV com nichos decorativos embutidos"
       }
     ]
   }

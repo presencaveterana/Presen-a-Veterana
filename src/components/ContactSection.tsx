@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MessageCircle, Mail, Phone, MapPin, Clock, Send, CheckCircle, ChevronDown } from "lucide-react";
+import { MessageCircle, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import {
   WHATSAPP_DISPLAY,
   EMAIL_CONTACT,
@@ -14,7 +14,6 @@ export const ContactSection: React.FC = () => {
     mensagem: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,25 +29,6 @@ Mensagem: ${formState.mensagem || "Gostaria de agendar uma visita para orçament
     window.open(getWhatsAppLink(msg), "_blank");
     setIsSubmitted(true);
   };
-
-  const faqs = [
-    {
-      q: "O processo de afagamento faz muita poeira dentro de casa?",
-      a: "Não. Utilizamos maquinaria moderna equipada com sistemas de extração de alto vácuo e filtragem de micropartículas. O pó gerado é imediatamente aspirado para os reservatórios estanques da máquina, mantendo o ambiente limpo e seguro."
-    },
-    {
-      q: "Quanto tempo demora a secar o verniz após a aplicação?",
-      a: "Com os vernizes aquosos ecológicos de última geração, a secagem ao tato ocorre entre 3 a 5 horas. É possível pisar com cuidado após 24 horas, e a cura total de dureza máxima é atingida em cerca de 5 a 7 dias."
-    },
-    {
-      q: "Atendem fora de Portugal e por toda a Europa?",
-      a: "Sim. A Presença Veterana Unipessoal Lda. tem sede em Guimarães e Braga e dispõe de estrutura para deslocação e execução de projetos em Portugal e por toda a Europa. Entre em contacto connosco para planearmos a sua obra com orçamento detalhado."
-    },
-    {
-      q: "Qual a diferença entre deck de madeira natural e compósito?",
-      a: "A madeira natural (como o Ipê ou a Teca) proporciona um toque nobre inigualável e conforto térmico sob o sol, necessitando de óleo de manutenção periódico. O compósito necessita de menos manutenção preventiva e oferece grande estabilidade de cor."
-    }
-  ];
 
   return (
     <section id="contactos" className="py-10 sm:py-16 lg:py-24 bg-white">
@@ -131,38 +111,6 @@ Mensagem: ${formState.mensagem || "Gostaria de agendar uma visita para orçament
               </div>
             </div>
 
-            {/* Perguntas Frequentes (FAQ) */}
-            <div className="pt-2 sm:pt-4">
-              <h3 className="text-base sm:text-lg font-bold text-[#00351F] font-display mb-3 sm:mb-4">
-                Perguntas Frequentes
-              </h3>
-              <div className="space-y-2 sm:space-y-3">
-                {faqs.map((faq, index) => (
-                  <div
-                    key={index}
-                    className="border border-[#E6E9E4] rounded-xl overflow-hidden bg-[#F8F7F3]"
-                  >
-                    <button
-                      type="button"
-                      onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3.5 text-left flex items-center justify-between text-xs sm:text-sm font-bold text-[#00351F] cursor-pointer"
-                    >
-                      <span>{faq.q}</span>
-                      <ChevronDown
-                        className={`w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D4A64C] transition-transform shrink-0 ml-2 ${
-                          openFaq === index ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                    {openFaq === index && (
-                      <div className="px-3.5 pb-3 sm:px-4 sm:pb-4 text-[11px] sm:text-sm text-[#646B66] leading-relaxed border-t border-[#E6E9E4]/60 pt-2">
-                        {faq.a}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Direct Contact Form */}
@@ -265,10 +213,6 @@ Mensagem: ${formState.mensagem || "Gostaria de agendar uma visita para orçament
                     <span>Iniciar Conversa no WhatsApp</span>
                     <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </button>
-
-                  <p className="text-[10px] sm:text-[11px] text-center text-[#646B66]">
-                    Ao submeter, será reencaminhado de imediato para o WhatsApp da Presença Veterana.
-                  </p>
                 </form>
               )}
             </div>

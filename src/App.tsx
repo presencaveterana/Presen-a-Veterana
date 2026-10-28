@@ -5,8 +5,8 @@ import { AboutSection } from "./components/AboutSection";
 import { SpecialtiesSection } from "./components/SpecialtiesSection";
 import { AdvantagesSection } from "./components/AdvantagesSection";
 import { QuoteSimulator } from "./components/QuoteSimulator";
-import { TestimonialsSection } from "./components/TestimonialsSection";
 import { ContactSection } from "./components/ContactSection";
+import { FaqSection } from "./components/FaqSection";
 import { Footer } from "./components/Footer";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 
@@ -33,11 +33,11 @@ export default function App() {
         {/* 5. Simulador Interativo de Orçamento */}
         <QuoteSimulator />
 
-        {/* 6. Testemunhos de Clientes */}
-        <TestimonialsSection />
-
-        {/* 7. Contactos, Visitas Técnicas & FAQ */}
+        {/* 6. Contactos, Visitas Técnicas */}
         <ContactSection />
+
+        {/* 7. Perguntas Frequentes (FAQ Geral) */}
+        <FaqSection />
       </main>
 
       {/* Institutional Footer */}
