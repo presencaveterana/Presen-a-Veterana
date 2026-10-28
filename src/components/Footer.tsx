@@ -14,19 +14,13 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 sm:gap-10 pb-8 sm:pb-12 border-b border-white/10">
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-3 sm:space-y-4">
-            <div className="flex items-center gap-2 sm:gap-2.5">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#00351F] border border-[#D4A64C]/40 flex items-center justify-center text-[#D4A64C] font-bold font-display text-base sm:text-xl">
-                PV
-              </div>
-              <div>
-                <span className="text-lg sm:text-xl font-bold font-display text-white tracking-tight block">
-                  Presença Veterana
-                </span>
-                <span className="text-[10px] sm:text-[11px] uppercase tracking-widest text-[#D4A64C] font-semibold block -mt-0.5">
-                  Unipessoal Lda.
-                </span>
-              </div>
-            </div>
+            <a href="/" className="inline-block group" aria-label="Presença Veterana Unipessoal Lda.">
+              <img
+                src="/assets/aistudio/logo_presenca_veterana.png"
+                alt="Presença Veterana Unipessoal Lda."
+                className="h-10 sm:h-14 w-auto object-contain brightness-110 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)] group-hover:scale-[1.02] transition-transform"
+              />
+            </a>
 
             <div className="pt-1 sm:pt-2 text-[11px] sm:text-xs text-slate-400 flex items-center gap-2">
               <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D4A64C] shrink-0" />

@@ -45,23 +45,18 @@ export const Header: React.FC = () => {
 
       {/* Main Top Bar - Strictly Zone 1, Zone 2, Zone 3 */}
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4 sm:gap-8 h-15 sm:h-20">
-          {/* Zone 1: Brand Wordmark */}
+        <div className="flex items-center justify-between gap-3 sm:gap-8 min-h-[76px] sm:min-h-[88px] md:min-h-[96px] py-2 sm:py-3">
+          {/* Zone 1: Brand Official Logo */}
           <a
             href="/"
-            className="flex items-center gap-2 text-slate-900 group shrink-0 whitespace-nowrap"
+            className="flex items-center group shrink-0"
+            aria-label="Presença Veterana Unipessoal Lda."
           >
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#00351F] flex items-center justify-center text-[#D4A64C] font-bold font-display text-base sm:text-xl shadow-sm border border-[#D4A64C]/30 group-hover:scale-105 transition-transform">
-              PV
-            </div>
-            <div className="flex flex-col">
-              <span className="text-base sm:text-xl font-extrabold text-[#00351F] font-display tracking-tight leading-tight">
-                Presença Veterana
-              </span>
-              <span className="text-[9px] sm:text-[10px] tracking-widest uppercase font-semibold text-[#B8862D] -mt-0.5">
-                Unipessoal Lda.
-              </span>
-            </div>
+            <img
+              src="/assets/aistudio/logo_presenca_veterana.png"
+              alt="Presença Veterana Unipessoal Lda."
+              className="h-13 xs:h-15 sm:h-18 md:h-20 lg:h-22 w-auto max-w-[230px] xs:max-w-[270px] sm:max-w-none object-contain group-hover:scale-[1.02] transition-transform"
+            />
           </a>
 
           {/* Zone 2: Navigation Links (Clean single-line prose) */}
